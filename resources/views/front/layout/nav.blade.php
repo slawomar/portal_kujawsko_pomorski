@@ -1,44 +1,221 @@
+				<!-- navbar list container -->
+				<div class="nav-list-container">
+					<div class="container">
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-left">
 
-        <div class="website-menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Start</a>
-                                    </li>
-                                    {{-- zmienna globalna global_categories z AppServiceProvider --}}
-                                    @foreach($global_categories as $item)
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="javscript:void;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {{ $item->category_name }}
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                @foreach($item->rSubCategory as $item2)
-                                                <li><a class="dropdown-item" href="{{ route('category',$item2->id) }}">{{ $item2->sub_category_name }}</a></li>
-                                                @endforeach
-                                            </ul>
-                                        </li>
-                                    @endforeach
+								<li><a class="active" href="{{ route('home') }}">Start</a></li>
+								<li><a href="game-category.html">News</a></li>
+								<li class="drop-arrow"><a href="game-category.html">Reviews</a>
+									<div class="megadropdown">
+										<div class="container">
+											<div class="inner-megadropdown">
 
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Galeria
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="{{ route('photo_gallery') }}">Zdjęcia</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('video_gallery') }}">Filmy</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>  
+												<div class="owl-wrapper">
+													<div class="owl-carousel" data-num="5">
+													
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st1.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros. </a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st2.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. </a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st3.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st4.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Donec nec justo eget felis facilisis fermentum. </a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st5.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Donec nec justo eget felis facilisis fermentum. </a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li><a href="game-category.html">Video</a></li>
+								<li><a href="game-category.html">Xbox One</a></li>
+								<li class="drop-arrow"><a href="game-category.html">PS 4</a>
+									<div class="megadropdown">
+										<div class="container">
+											<div class="inner-megadropdown">
+
+												<div class="owl-wrapper">
+													<div class="owl-carousel" data-num="5">
+													
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st1.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros. </a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st2.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. </a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st3.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st4.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Donec nec justo eget felis facilisis fermentum. </a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="item news-post standard-post">
+															<div class="post-gallery">
+																<img src="upload/news-posts/st5.jpg" alt="">
+																<div class="rate-level">
+																	<p><span>7.4</span> Good</p>
+																</div>
+															</div>
+															<div class="post-content">
+																<h2><a href="single-post.html">Donec nec justo eget felis facilisis fermentum. </a></h2>
+																<ul class="post-tags">
+																	<li><i class="fa fa-clock-o"></i>27 may 2013</li>
+																	<li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+																</ul>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+								<li><a href="game-category.html">Wii U</a></li>
+								<li><a href="game-category.html">Pc</a></li>
+								<li><a href="game-category.html">Mobile Gaming</a></li>
+								<li class="drop-arrow drop"><a href="games-category.html">More</a>
+									<ul class="dropdown">
+										<li><a href="game-category.html">Nintendo</a></li>
+										<li><a href="game-category.html">App Games</a></li>
+									</ul>
+								</li>
+
+							</ul>
+							<form class="navbar-form navbar-right" role="search">
+								<input type="text" id="search" name="search" placeholder="Search here">
+								<button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+						<!-- /.navbar-collapse -->
+					</div>
+				</div>
+				<!-- End navbar list container -->

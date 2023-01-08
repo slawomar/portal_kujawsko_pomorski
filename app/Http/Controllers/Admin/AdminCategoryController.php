@@ -32,7 +32,7 @@ class AdminCategoryController extends Controller
         $category->category_order = $request->category_order;
         $category->save();
 
-        return redirect()->route('admin_category_show')->with('success', 'Data is added successfully.');
+        return redirect()->route('admin_category_show')->with('success', 'Dane zostały dodane pomyślnie.');
     }
 
     public function edit($id)

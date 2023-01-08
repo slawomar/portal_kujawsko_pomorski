@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\SinglepostController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\FaqController;
@@ -45,6 +46,8 @@ use App\Http\Controllers\Author\AuthorPostController;
 
 /* Front End */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/singlepost', [SinglepostController::class, 'index'])->name('singlepost');
+
 Route::get('/subcategory-by-category/{id}', [HomeController::class, 'get_subcategory_by_category'])->name('subcategory-by-category');
 
 Route::post('/search/result', [HomeController::class, 'search'])->name('search_result');
